@@ -1,0 +1,56 @@
+
+General Information about the atom:
+  Symbol: H
+  Theory Level: DFT
+  Wave-equation: Schrodinger
+  Spin mode: unpolarized
+  Nuclear charge:   1.00
+  Total charge:     0.00
+  Configuration    : State   Occupation
+                       1s       1.00
+                       2p       0.00
+                       3d       0.00
+                       4f       0.00
+
+Exchange-Correlation model:
+  Correlation: Perdew & Zunger (LDA)
+  Exchange:    Slater exchange (LDA)
+
+Mesh information:
+  Type: logarithmic [ri = b*exp(a*i)]
+  Mesh starting point:   1.00E-05 b
+  Mesh outmost point:     30.000 b
+  Mesh parameters (a, b):  7.49453E-02,  9.27794E-06
+  Mesh number of points:    200
+  Derivatives Method: Cubic slines
+ 
+SCF cycle information:
+  Number of iterations:     12
+  Convergence: 
+    ConvAbsDens   = 7.41E-09 ( 0.00E+00)
+    ConvRelDens   = 7.41E-09 ( 1.00E-08)
+    ConvAbsEnergy = 6.35E-09 ( 0.00E+00)
+    ConvRelEnergy = 1.42E-08 ( 0.00E+00)
+ 
+Density Moments
+  <r^-2> =        1.749
+  <r^-1> =        0.921
+  <r^ 1> =        1.673
+  <r^ 2> =        3.816
+  <r^ 3> =       11.073
+  <r^ 4> =       39.135
+  <r^ 5> =      163.434
+ 
+Energies [H]
+  Total energy:                              -0.445894
+  Kinetic energy:                             0.424831
+  Electron-electron interaction energy:       0.282781
+  Electron-nucleus interaction energy:       -0.920794
+  Exchange-correlation energy:               -0.232712
+ 
+    Eigenvalues [H]
+     State   Occupation   Eigenvalue
+       1s       1.00        -0.23366
+       2p       0.00         0.00000
+       3d       0.00         0.00000
+       4f       0.00         0.00000

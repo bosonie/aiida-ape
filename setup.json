@@ -1,0 +1,46 @@
+{
+    "name": "aiida-ape",
+    "author": "Emanuele Bosoni",
+    "author_email": "bosonie@tcd.ie",
+    "description": "AiiDA plugin for APE eingine",
+    "url": "https://github.com/aiidateam/aiida-mycode",
+    "license": "Creative Commons",
+    "classifiers": [
+        "Programming Language :: Python"
+    ],
+    "version": "0.2.0",
+    "entry_points": {
+        "aiida.calculations": [
+            "ape.ape = aiida_ape.calculations.ape:ApeCalculation"
+        ],
+        "aiida.parsers": [
+            "ape.parsers = aiida_ape.parsers.ape:ApeParser"
+        ],
+        "aiida.data": [
+            "ape.psf = aiida_ape.data.psf:PsfData"
+        ],
+        "aiida.cmdline.data": [
+            "psf = aiida_ape.commands.data_psf:psfdata"
+        ]
+    },
+    "scripts": ["examples/cli.py"],
+    "setup_requires": ["reentry"],
+    "reentry_register": true,
+    "install_requires": [
+        "aiida >= 0.11.0"
+    ],
+    "extras_require": {
+        "testing": [
+            "aiida-core[testing]"
+        ],
+        "pre-commit": [
+            "pre-commit",
+            "yapf",
+            "prospector",
+            "pylint"
+        ],
+        "docs": [
+            "sphinx"
+        ]
+    }
+}

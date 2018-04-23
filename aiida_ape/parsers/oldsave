@@ -1,0 +1,106 @@
+# -*- coding: utf-8 -*-
+import json
+from aiida.parsers.parser import Parser
+from aiida_ape.calculations.ape import ApeCalculation
+from aiida.parsers.exceptions import OutputParsingError
+from aiida.orm.data.parameter import ParameterData
+
+#from aiida.orm import CalculationFactory
+#ApeCalculation = CalculationFactory('template.multiply')
+
+#class ApeOutputParsingError(OutputParsingError):
+#     pass
+#---------------------------
+
+class ApeParser(Parser):
+    """
+    Parser class for parsing output of multiplication.
+    """
+
+    def __init__(self, calculation):
+#        """
+#        Initialize Parser instance
+#        """
+        super(ApeParser, self).__init__(calculation)
+#
+#        # check for valid input
+        if not isinstance(calculation, ApeCalculation):
+            raise OutputParsingError("Can only parse ApeCalculation")
+
+    # pylint: disable=protected-access
+    def parse_with_retrieved(self, retrieved):
+        """
+        Parse output data folder, store results in database.
+
+        :param retrieved: a dictionary of retrieved nodes, where
+          the key is the link name
+        :returns: a tuple with two values ``(bool, node_list)``, 
+          where:
+
+          * ``bool``: variable to tell if the parsing succeeded
+          * ``node_list``: list of new nodes to be stored in the db
+            (as a list of tuples ``(link_name, node)``)
+        """
+        success = False
+        node_list=()
+        try:
+            out_folder = retrieved[self._calc._get_linkname_retrieved()]
+        except KeyError:
+	##    #raise IOError("No retrieved folder found")
+            self.logger.error("No retrieved folder found")
+            return success, node_list
+
+        list_of_files = out_folder.get_folder_list()
+
+        if self._calc._OUTPUT_FILE_NAME not in list_of_files:
+            self.logger.error("Output file not found")
+            return success, node_list
+
+#        if "H.ascii" not in list_of_files:
+#            self.logger.error("ascii file not found")
+#            return success, node_list
+
+
+        try:
+            with open( out_folder.get_abs_path(self._calc._OUTPUT_FILE_NAME) ) as f:
+                a=f.readline().split()
+        except ValueError:
+        #    success=False
+            self.logger.error("Error parsing the output")
+            return success,node_list
+
+	s=ParameterData(dict={"a": "l"})
+	link_name = self.get_linkname_outparams()
+	nodes_list = [(link_name, s)]
+
+        from aiida_ape.data.psf import PsfData
+        pseascii=PsfData()
+        pseascii.set_file(out_folder.get_abs_path("H.ascii"))
+        nodes_list.append((self.get_linkname_pseascii(),pseascii))
+
+	from aiida.orm.data.upf import UpfData
+	pseupf=UpfData()
+	pseupf.set_file(out_folder.get_abs_path("H.UPF"))
+        nodes_list.append((self.get_linkname_pseupf(),pseupf))
+
+	success=True
+        return success, nodes_list #out_nodes
+
+
+    def get_linkname_pseupf(self):
+        """                                                                     
+        Returns the name of the link to the bands_array                        
+        In Siesta, Node exists to hold the bands,
+        pending the implementation of trajectory data.
+        """
+        return 'pseupf'
+
+
+    def get_linkname_pseascii(self):
+        """                                                                     
+        Returns the name of the link to the bands_array                        
+        In Siesta, Node exists to hold the bands,
+        pending the implementation of trajectory data.
+        """
+        return 'pseascii'
+

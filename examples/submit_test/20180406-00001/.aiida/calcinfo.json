@@ -1,0 +1,1 @@
+{"remote_copy_list": [], "retrieve_list": ["ape.out", "_scheduler-stdout.txt", "_scheduler-stderr.txt"], "codes_info": [{"cmdline_params": ["./ape"], "code_uuid": "57921d81-3b0d-45a0-ab29-88285279d190", "stdout_name": "ape.out", "stdin_name": "ape.in"}], "uuid": "f1f5e635-f5be-42cd-8a16-f7b407a71ba5", "local_copy_list": []}

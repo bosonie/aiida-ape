@@ -1,0 +1,23 @@
+CalculationMode=ae + pp
+CoreCorrection=0
+EigenSolverTolerance=1.e-8
+NuclearCharge=1
+ODEIntTolerance=1.e-12
+PPCalculationTolerance=1.e-6
+PPOutputFileFormat=upf + siesta
+Title=H
+Verbose=40
+WaveEquation=schrodinger
+XCFunctional=lda_x + lda_c_pz
+%Orbitals
+  1  |  0  | 1.000  | 0.000
+  2  |  1  | 0.000  | 0.000 
+  3  |  2  | 0.000  | 0.000 
+  4  |  3  | 0.000  | 0.000 
+  % 
+%PPComponents
+  1  |  0  | 1.000  | tm
+  2  |  1  | 1.000  | tm 
+  3  |  2  | 1.000  | tm 
+  4  |  3  | 1.000  | tm 
+  % 

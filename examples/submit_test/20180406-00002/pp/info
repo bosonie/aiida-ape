@@ -1,0 +1,66 @@
+
+Pseudo atom information:
+  Wavefunction info:
+    State   Occupation    Node radius   Peak radius   Default core radius
+     1s        1.00          0.000         1.029             0.000
+     2p        0.00          0.000         0.000             0.000
+     3d        0.00          0.000         0.000             0.000
+     4f        0.00          0.000         0.000             0.000
+
+Pseudopotential Generation:
+  State: 1s
+    Scheme: Troullier-Martins
+    Core radius:   1.000
+    Coefficients:
+      c0  =  3.956508321E-01   c2  = -1.088762921E+00
+      c4  = -2.370809398E-01   c6  =  1.921852282E+00
+      c8  = -2.381861276E+00   c10 =  1.293666288E+00
+      c12 = -2.697637257E-01
+    Residues:
+      c2**2 + c4(2l+5)    = -2.378652830E-13
+      norm[AE] - norm[PP] = -2.712727820E-10
+
+  State: 2p
+    Scheme: Troullier-Martins
+    Core radius:   1.000
+    Coefficients:
+      c0  = -4.999502149E+00   c2  = -4.816551010E-01
+      c4  = -3.314166163E-02   c6  =  6.323381991E-01
+      c8  = -7.845827460E-01   c10 =  4.202793061E-01
+      c12 = -8.644578456E-02
+    Residues:
+      c2**2 + c4(2l+5)    =  1.113526453E-16
+      norm[AE] - norm[PP] =  4.935478359E-09
+
+  State: 3d
+    Scheme: Troullier-Martins
+    Core radius:   1.000
+    Coefficients:
+      c0  = -9.586895231E+00   c2  = -2.859955895E-01
+      c4  = -9.088164115E-03   c6  =  3.067698194E-01
+      c8  = -3.648515409E-01   c10 =  1.881048567E-01
+      c12 = -3.748475260E-02
+    Residues:
+      c2**2 + c4(2l+5)    =  6.090117260E-23
+      norm[AE] - norm[PP] =  1.642176811E-10
+
+  State: 4f
+    Scheme: Troullier-Martins
+    Core radius:   1.000
+    Coefficients:
+      c0  = -1.326018656E+01   c2  = -1.402657987E-01
+      c4  = -1.788574500E-03   c6  = -1.976057347E-02
+      c8  =  9.565389013E-02   c10 = -7.937957499E-02
+      c12 =  2.075221943E-02
+    Residues:
+      c2**2 + c4(2l+5)    =  5.080062281E-24
+      norm[AE] - norm[PP] =  1.747906485E-07
+
+ 
+
+Pseudopotentials Self-Consistency:
+  State  Eigenvalue [H ]    Norm Test   Slope Test
+    1s        -0.23367      1.0000237   0.9999318
+    2p         0.00000      0.9999081   1.0000053
+    3d         0.00000      0.9997807   0.9999962
+    4f         0.00000      0.9994270   0.9999941
