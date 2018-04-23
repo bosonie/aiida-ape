@@ -1,5 +1,5 @@
-AiiDA Ape plugins and workflows
-===============================
+AiiDA Ape plugin and workflows
+==============================
 
 AiiDA plugin for ape 2.2.0 (http://www.tddft.org/programs/APE),
 a pseudopotential engine able to create pseudopotential for SIESTA, PWscf, ABINIT, OCTOPUS.
