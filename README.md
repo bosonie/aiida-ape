@@ -28,40 +28,40 @@ As the ape code is serial and the pseudo generation is not demanding, it is alwa
 This means you have to
  
 * add local machine to the list of computers:
-"   verdi computer setup
-   At any prompt, type ? to get some help.
-   ---------------------------------------
-   => Computer name: localhost
-   Creating new computer with name 'localhost'
-   => Fully-qualified hostname: localhost
-   => Description: my local computer
-   => Enabled: True
-   => Transport type: local
-   => Scheduler type: direct
-   => AiiDA work directory: /tmp
-   => mpirun command:
-   => Default number of CPUs per machine: 4
-   => Text to prepend to each command execution:
-      # This is a multiline input, press CTRL+D on a
-      # empty line when you finish
-      # ------------------------------------------
-      # End of old input. You can keep adding
-      # lines, or press CTRL+D to store this value
-      # ------------------------------------------
-   => Text to append to each command execution:
-      # This is a multiline input, press CTRL+D on a
-      # empty line when you finish
-      # ------------------------------------------
-      # End of old input. You can keep adding
-      # lines, or press CTRL+D to store this value
-      # ------------------------------------------
-   Computer 'localhost' successfully stored in DB.
-   pk: 1, uuid: a5b452f0-ec1e-4ec2-956a-10a416f60ed3
-   Note: before using it with AiiDA, configure it using the command
-     verdi computer configure localhost
-   (Note: machine_dependent transport parameters cannot be set via
-   the command-line interface at the moment)
-"
+>   verdi computer setup
+>   At any prompt, type ? to get some help.
+>   ---------------------------------------
+>   => Computer name: localhost
+>   Creating new computer with name 'localhost'
+>   => Fully-qualified hostname: localhost
+>   => Description: my local computer
+>   => Enabled: True
+>   => Transport type: local
+>   => Scheduler type: direct
+>   => AiiDA work directory: /tmp
+>   => mpirun command:
+>   => Default number of CPUs per machine: 4
+>   => Text to prepend to each command execution:
+>      # This is a multiline input, press CTRL+D on a
+>      # empty line when you finish
+>      # ------------------------------------------
+>      # End of old input. You can keep adding
+>      # lines, or press CTRL+D to store this value
+>      # ------------------------------------------
+>   => Text to append to each command execution:
+>      # This is a multiline input, press CTRL+D on a
+>      # empty line when you finish
+>      # ------------------------------------------
+>      # End of old input. You can keep adding
+>      # lines, or press CTRL+D to store this value
+>      # ------------------------------------------
+>   Computer 'localhost' successfully stored in DB.
+>   pk: 1, uuid: a5b452f0-ec1e-4ec2-956a-10a416f60ed3
+>   Note: before using it with AiiDA, configure it using the command
+>     verdi computer configure localhost
+>   (Note: machine_dependent transport parameters cannot be set via
+>   the command-line interface at the moment)
+
 * configure the computer localhost:
    verdi computer configure localhost 
    Configuring computer 'localhost' for the AiiDA user 'user@tcd.ie'
