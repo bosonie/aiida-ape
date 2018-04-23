@@ -5,7 +5,7 @@ AiiDA plugin for ape 2.2.0 (http://www.tddft.org/programs/APE),
 a pseudopotential engine able to create pseudopotential for SIESTA, PWscf, ABINIT, OCTOPUS.
 
 Extremely basic version, built for personal needs.
-The inputs are simple ParameterData end essentially only the generated SIESTA
+The inputs are simple ParameterData and essentially only the generated SIESTA
 and PWscf pseudopotential are retrieved and stored in the database.
 ABINIT, OCTOPUS pseudopotential are not supported yet!
 Not even the error menagement is properly coded.
