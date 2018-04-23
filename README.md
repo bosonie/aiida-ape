@@ -71,8 +71,8 @@ This means you have to:
    Computer localhost has transport of type local
    There are no special keys to be configured. Configuration completed.
 ```
-* setupp the code. Code setup is the same as every other code, be carefull at the line
-"Folder with the code". You put there the folder where your code is.
+* setup the code. Code setup is the same as every other code in a remote computer, 
+just be carefull at the line"Folder with the code". You put there the folder where your code is.
 All the files in that directory will be copied in the running directory.
 Line "Relative path of the executable" specifies the name of the executable
 to be run, the executable could be in a subfolder of the folder
