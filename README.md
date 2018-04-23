@@ -23,8 +23,8 @@ Installation and setup
 * git clone https://github.com/bosonie/aiida-ape
 * pip install -e .
 * reentry scan -r aiida
-As the ape code is serial and the pseudo generation is not demanding,
-it is always suggested to to have it in your local machine.
+
+As the ape code is serial and the pseudo generation is not demanding, it is always suggested to to have it in your local machine.
 This means you have to 
 * add local machine to the list of computers:
    verdi computer setup
