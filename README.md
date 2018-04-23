@@ -23,7 +23,6 @@ cd aiida-ape
 git clone https://github.com/bosonie/aiida-ape
 pip install -e .
 reentry scan -r aiida
-
 As the ape code is serial and the pseudo generation is not demanding,
 it is always suggested to to have it in your local machine.
 This means you have to add local machine to the list of computers:
@@ -65,7 +64,6 @@ This means you have to add local machine to the list of computers:
    Configuring computer 'localhost' for the AiiDA user 'user@tcd.ie'
    Computer localhost has transport of type local
    There are no special keys to be configured. Configuration completed.
-
 Code setup is the same as every other code, be carefull at the line
 "Folder with the code". You put there the folder where your code is.
 All the files in that directory will be copied in the running directory.
