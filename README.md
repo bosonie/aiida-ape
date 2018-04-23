@@ -31,6 +31,7 @@ This means you have to:
 ```
    verdi computer setup
    At any prompt, type ? to get some help.
+   ---------------------------------------
    => Computer name: localhost
    Creating new computer with name 'localhost'
    => Fully-qualified hostname: localhost
@@ -62,18 +63,23 @@ This means you have to:
    (Note: machine_dependent transport parameters cannot be set via
    the command-line interface at the moment)
 ```
+
 * configure the computer localhost:
+```
    verdi computer configure localhost 
    Configuring computer 'localhost' for the AiiDA user 'user@tcd.ie'
    Computer localhost has transport of type local
    There are no special keys to be configured. Configuration completed.
-Code setup is the same as every other code, be carefull at the line
+```
+* setupp the code. Code setup is the same as every other code, be carefull at the line
 "Folder with the code". You put there the folder where your code is.
 All the files in that directory will be copied in the running directory.
 Line "Relative path of the executable" specifies the name of the executable
 to be run, the executable could be in a subfolder of the folder
 specified in "Folder with the code".
-   $ verdi code setup  # set up (local) code
+
+```
+   verdi code setup  # set up (local) code
    At any prompt, type ? to get some help.
    ---------------------------------------
    => Label: aiida_ape
@@ -99,6 +105,7 @@ specified in "Folder with the code".
       # ------------------------------------------
    Code 'aiida_ape' successfully stored in DB.
    pk: 1, uuid: 7627c747-b7f2-4717-b0fa-94e53915e422
+```
 
 
 Workflow
