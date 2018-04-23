@@ -25,9 +25,10 @@ Installation and setup
 * reentry scan -r aiida
 
 As the ape code is serial and the pseudo generation is not demanding, it is always suggested to to have it in your local machine.
-This means you have to 
+This means you have to
+ 
 * add local machine to the list of computers:
-   verdi computer setup
+"   verdi computer setup
    At any prompt, type ? to get some help.
    ---------------------------------------
    => Computer name: localhost
@@ -60,7 +61,8 @@ This means you have to
      verdi computer configure localhost
    (Note: machine_dependent transport parameters cannot be set via
    the command-line interface at the moment)
-
+"
+* configure the computer localhost:
    verdi computer configure localhost 
    Configuring computer 'localhost' for the AiiDA user 'user@tcd.ie'
    Computer localhost has transport of type local
