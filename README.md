@@ -30,10 +30,15 @@ This means you have to
 * add local machine to the list of computers:
 
 >   verdi computer setup
+
 >   At any prompt, type ? to get some help.
+
 >   => Computer name: localhost
+
 >   Creating new computer with name 'localhost'
+
 >   => Fully-qualified hostname: localhost
+
 >   => Description: my local computer
 >   => Enabled: True
 >   => Transport type: local
