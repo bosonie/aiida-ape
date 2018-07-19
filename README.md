@@ -112,8 +112,13 @@ Workflow
 ========
 
 I built the plugin just because I wanted to use it within a workflow to test 
-.UPF pseudopotential. The workflow I wrote is in the folder /workflows.
+.UPF pseudopotential (compare them to an all electron code with delta test).
+The workflow I wrote is in the folder /workflows.
 To use the workflow you need aiida-quantumespresso and the related setup.
 The workflow at the moment works only if you copy it in you virtualenvironment/bin folder
 or in your PYTHON PATH if you don't use virtual environment.
-Waiting updates on the new workflow system from aiidateam before stabilizing the workflow
+Waiting updates on the new workflow system from aiidateam before stabilizing the workflow.
+Finally, the reference all electron calculation is in a file in my computer,
+I don't distribute the all electron results, you have to modify the workflow in order
+to let it get your own reference file with all electron results. Also the cif structure
+are in my computer, you can find them online, they are the same used for the delta test.
