@@ -32,7 +32,7 @@ def generate_scf_input_params(structure, codename, pseudo, element):
 #    kpoints_mesh = 2
     kp=[0,0,0]
 
-    f=open('/home/bosonie/AIMS/LDARESULTS/NonRelBirchLDAref', 'r')
+    f=open('/home/bosonie/your/reference/file', 'r')
     for line in f:
         a=line.split()
         if a[0]==element:
@@ -95,7 +95,7 @@ def diff_murn_squared(V, Vo, Bo, Bp, Vo2, Bo2, Bp2):
 
 
 def get_reference(element):
-    f=open('AIMS/LDARESULTS/NonRelBirchLDAref', 'r')
+    f=open('your/reference/file', 'r')
     for line in f:
     	a=line.split()
     	if a[0]==element:

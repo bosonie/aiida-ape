@@ -17,7 +17,7 @@ def structure_init(element):
 #    import numpy as np
     kp=[0,0,0]  
 
-    f=open('/home/bosonie/AIMS/LDARESULTS/NonRelBirchLDAref', 'r')
+    f=open('/home/bosonie/your/reference/file', 'r')
     for line in f:
         a=line.split()
         if a[0]==element:
@@ -26,7 +26,7 @@ def structure_init(element):
 	    kp[2]=int(a[5])
 	    vol=a[7]
  
-    in_structure = mg.Structure.from_file("/home/bosonie/AIMS/CIFsReproducibilityDFT/{0}.cif".format(element), primitive=False)
+    in_structure = mg.Structure.from_file("/home/your/CIFsReproducibilityDFT/{0}.cif".format(element), primitive=False)
     newreduced=in_structure.copy()
     newreduced.scale_lattice(float(vol)*in_structure.num_sites)
     StructureData = DataFactory("structure")
