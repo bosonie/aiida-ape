@@ -63,7 +63,7 @@ computer = Computer.get('localhost')
 # set up calculation
 calc = code.new_calc()
 calc.label = "aiida_ape test 0"
-calc.description = "Test job submission with the aiida_ape plugin"
+calc.description = "Test job submission with aiida_ape plugin"
 #calc.set_max_wallclock_seconds(30 * 60)  # 30 min
 # This line is only needed for local codes, otherwise the computer is
 # automatically set from the code
